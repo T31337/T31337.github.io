@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMU GAMIFICATION SURVIVAL GUIDE: Proven Zero-Purchase Win Methods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: hue-rotate 8s infinite linear;
+        }
+        @keyframes hue-rotate {
+            from { filter: hue-rotate(0deg); }
+            to { filter: hue-rotate(360deg); }
+        }
+        .glow-box {
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.3), inset 0 0 20px rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.5);
+        }
+        .scam-warning {
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 0, 0, 0.1),
+                rgba(255, 0, 0, 0.1) 10px,
+                rgba(255, 0, 0, 0.2) 10px,
+                rgba(255, 0, 0, 0.2) 20px
+            );
+            border: 2px dashed #ff4444;
+        }
+        .win-method {
+            background: linear-gradient(135deg, rgba(72, 219, 251, 0.1), rgba(255, 159, 243, 0.1));
+            border: 1px solid rgba(72, 219, 251, 0.3);
+            transition: all 0.3s ease;
+        }
+        .win-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(72, 219, 251, 0.2);
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #ff6b6b 0%, #feca57 50%, #1dd1a1 100%);
+            height: 4px;
+            animation: load 2s ease-out;
+        }
+        @keyframes load {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .glitch {
+            position: relative;
+        }
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00ff;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #00ffff;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(30px, 9999px, 10px, 0); }
+            20% { clip: rect(80px, 9999px, 90px, 0); }
+            40% { clip: rect(10px, 9999px, 50px, 0); }
+            60% { clip: rect(60px, 9999px, 20px, 0); }
+            80% { clip: rect(40px, 9999px, 70px, 0); }
+            100% { clip: rect(90px, 9999px, 30px, 0); }
+        }
+        @keyframes glitch-anim2 {
+            0% { clip: rect(60px, 9999px, 20px, 0); }
+            20% { clip: rect(10px, 9999px, 50px, 0); }
+            40% { clip: rect(90px, 9999px, 30px, 0); }
+            60% { clip: rect(30px, 9999px, 10px, 0); }
+            80% { clip: rect(80px, 9999px, 90px, 0); }
+            100% { clip: rect(40px, 9999px, 70px, 0); }
+        }
+        .step-number {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            font-size: 3rem;
+            line-height: 1;
+        }
+        .hidden-truth {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #ff6b6b;
+            position: relative;
+            overflow: hidden;
+        }
+        .hidden-truth::before {
+            content: "CLASSIFIED";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 4rem;
+            color: rgba(255, 0, 0, 0.1);
+            font-weight: 900;
+            pointer-events: none;
+        }
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 2px dotted #feca57;
+        }
+        .tooltip:hover::after {
+            content: attr(data-tip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a2e;
+            border: 1px solid #feca57;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: -1;
+        }
+        .collapsible {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .collapsible:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .content.active {
+            max-height: 2000px;
+        }
+        .chevron {
+            transition: transform 0.3s;
+        }
+        .chevron.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Matrix Background Effect -->
+    <canvas id="matrix" class="matrix-bg"></canvas>
+
+    <!-- Header -->
+    <header class="relative overflow-hidden border-b border-red-900/30 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="absolute inset-0 bg-gradient-to-r from-red-900/20 via-orange-900/20 to-purple-900/20"></div>
+        <div class="container mx-auto px-4 py-6 relative">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-black tracking-tighter glitch" data-text="TEMU SURVIVAL PROTOCOL">
+                        TEMU SURVIVAL PROTOCOL
+                    </h1>
+                    <p class="text-red-400 mono text-sm mt-2 tracking-widest">/// GAMIFICATION_DECONSTRUCTION_V2.5 ///</p>
+                </div>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-red-900/30 border border-red-500/50 rounded text-xs mono text-red-300">SCAM DETECTED</span>
+                    <span class="px-3 py-1 bg-green-900/30 border border-green-500/50 rounded text-xs mono text-green-300">EXPLOIT ACTIVE</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Critical Warning Banner -->
+    <div class="scam-warning p-4 text-center">
+        <p class="text-red-300 font-bold text-lg animate-pulse">
+            ⚠️ PSYCHOLOGICAL MANIPULATION DETECTED ⚠️ 
+            <span class="block text-sm font-normal text-red-200/80 mt-1">
+                Temu employs variable ratio reinforcement schedules identical to slot machines. This guide provides counter-measures.
+            </span>
+        </p>
+    </div>
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl space-y-8">
+
+        <!-- Executive Summary -->
+        <section class="glow-box rounded-lg p-6 bg-black/40">
+            <h2 class="text-2xl font-bold mb-4 gradient-text">THE CORE TRUTH</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="space-y-2">
+                    <div class="text-4xl font-black text-red-500">85%</div>
+                    <p class="text-sm text-gray-400">Of "free" games require purchase completion at 0.01-0.05 currency remaining [^15^]</p>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-black text-yellow-500">8-10</div>
+                    <p class="text-sm text-gray-400">Months average to win Farmland/Fishland without purchases [^15^]</p>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-black text-green-500">3,500+</div>
+                    <p class="text-sm text-gray-400">Clicks needed to progress from 30% to 95% in current algorithms [^17^]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Psychology Trap -->
+        <section class="hidden-truth rounded-lg p-6">
+            <h3 class="text-xl font-bold text-red-400 mb-4 mono">>> UNDERSTANDING THE MANIPULATION MECHANICS</h3>
+            <div class="grid md:grid-cols-2 gap-6 relative z-10">
+                <div>
+                    <h4 class="font-bold text-white mb-2">The "Near Miss" Effect</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Temu algorithms intentionally keep you at 0.01-0.05 currency units away from winning. This triggers the same dopamine response as near-misses in gambling, compelling users to "just complete one more purchase" to close the gap. <span class="tooltip text-yellow-400" data-tip="Verified by user data: 0.05 remaining requires ~3500 more actions">[?]</span>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-2">Variable Ratio Reinforcement</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Daily check-ins and "bonus" drops use unpredictable reward schedules (like slot machines) to create addiction loops. The "water/food" bonuses in Fishland/Farmland return only 10% of what you invest, ensuring net loss over time. [^15^]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROVEN ZERO-PURCHASE METHODS -->
+        <section class="space-y-6">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-green-500 to-transparent"></div>
+                <h2 class="text-3xl font-black text-green-400 mono text-center">CONFIRMED WORKING METHODS<br><span class="text-sm text-gray-400 font-normal">No Purchase Required • 2025 Verified</span></h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-green-500 to-transparent"></div>
+            </div>
+
+            <!-- Method 1 -->
+            <div class="win-method rounded-xl p-6 collapsible" onclick="toggle(this)">
+                <div class="flex justify-between items-start">
+                    <div class="flex gap-4">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-cyan-300">The Guest Mode Exploit</h3>
+                            <p class="text-gray-400 text-sm mt-1">Free Gift Tab Bypass • No Invites Needed [^2^]</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="content mt-4 space-y-3 text-gray-300">
+                    <div class="bg-black/30 p-4 rounded border-l-4 border-cyan-500">
+                        <p class="font-mono text-sm text-cyan-200 mb-2">EXECUTION PROTOCOL:</p>
+                        <ol class="list-decimal list-inside space-y-2 text-sm">
+                            <li>Open Temu links in <strong>Incognito/Private Browser Mode</strong> (Firefox Focus recommended)</li>
+                            <li>Select gift from Free Gift Tab (kitchenware/fans have highest success rate)</li>
+                            <li>Use <strong>Guest Checkout</strong> or create burner Gmail (temp-mail.org)</li>
+                            <li>Allow timer to run—shipping confirmation arrives 24-48hrs via email</li>
+                            <li>Repeat monthly with new browser profiles/devices</li>
+                        </ol>
+                    </div>
+                    <div class="flex gap-2 text-xs">
+                        <span class="px-2 py-1 bg-green-900/50 text-green-300 rounded">Success Rate: High</span>
+                        <span class="px-2 py-1 bg-yellow-900/50 text-yellow-300 rounded">Time: 24-48hrs</span>
+                        <span class="px-2 py-1 bg-red-900/50 text-red-300 rounded">Risk: Account Flagging if overused</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 2 -->
+            <div class="win-method rounded-xl p-6 collapsible" onclick="toggle(this)">
+                <div class="flex justify-between items-start">
+                    <div class="flex gap-4">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-purple-300">Referral Code Arbitrage</h3>
+                            <p class="text-gray-400 text-sm mt-1">Credit Without Reciprocity [^2^]</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="content mt-4 space-y-3 text-gray-300">
+                    <div class="bg-black/30 p-4 rounded border-l-4 border-purple-500">
+                        <p class="font-mono text-sm text-purple-200 mb-2">CRITICAL INSIGHT:</p>
+                        <p class="mb-3">You don't need to refer friends to benefit from referral codes. Temu rewards you <strong>for entering someone else's code</strong> during checkout.</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li>Create fresh account on new browser/device</li>
+                            <li>Apply working referral code BEFORE first checkout</li>
+                            <li>Algorithm favors users who haven't used codes in 30+ days</li>
+                            <li>Cycle by logging out and browsing incognito between attempts</li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-900/20 border border-yellow-600/30 p-3 rounded text-xs text-yellow-200">
+                        <strong>PRO TIP:</strong> Combine with Method 1 for $0.00 checkouts on $5+ carts.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 3 -->
+            <div class="win-method rounded-xl p-6 collapsible" onclick="toggle(this)">
+                <div class="flex justify-between items-start">
+                    <div class="flex gap-4">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-pink-300">Fetch Rewards Laundering</h3>
+                            <p class="text-gray-400 text-sm mt-1">Receipt → Visa → Temu Loop [^2^]</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-pink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="content mt-4 space-y-3 text-gray-300">
+                    <div class="bg-black/30 p-4 rounded border-l-4 border-pink-500">
+                        <p class="font-mono text-sm text-pink-200 mb-2">THE DOUBLE-DIP:</p>
+                        <ol class="list-decimal list-inside space-y-2 text-sm">
+                            <li>Download Fetch Rewards app</li>
+                            <li>Snap ANY receipt (groceries, gas, coffee) → Earn points</li>
+                            <li>Redeem points for <strong>Visa Gift Card</strong></li>
+                            <li>Use Visa on Temu checkout like real debit card</li>
+                            <li>Stack with Temu coupons for $0 net spend</li>
+                        </ol>
+                        <p class="mt-2 text-xs text-gray-400">Fetch runs promos: "3,000 bonus points for 3 receipts in 48h" = Accelerated Temu funding</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 4 -->
+            <div class="win-method rounded-xl p-6 collapsible" onclick="toggle(this)">
+                <div class="flex justify-between items-start">
+                    <div class="flex gap-4">
+                        <span class="step-number">04</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-orange-300">Algorithmic New-User Spoofing</h3>
+                            <p class="text-gray-400 text-sm mt-1">Device Fingerprinting Bypass [^10^]</p>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-orange-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="content mt-4 space-y-3 text-gray-300">
+                    <div class="bg-black/30 p-4 rounded border-l-4 border-orange-500">
+                        <p class="font-mono text-sm text-orange-200 mb-2">DEVICE CYCLING PROTOCOL:</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm">
+                            <li><strong>Delete app completely</strong> (not just logout)</li>
+                            <li>Clear device advertising ID (iOS: Settings > Privacy > Tracking > Reset; Android: Settings > Google > Ads > Reset)</li>
+                            <li>Use fresh download link (not App Store direct)</li>
+                            <li>Create new account with temp email</li>
+                            <li>Enter specific promo codes in search bar (e.g., "dyw4289" for $20 off $20) [^10^]</li>
+                        </ul>
+                        <div class="mt-3 p-2 bg-red-900/30 border border-red-500/50 rounded text-xs text-red-200">
+                            WARNING: Requires new device or 30+ day cooldown between attempts to avoid fingerprinting.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAME-SPECIFIC STRATEGIES -->
+        <section class="space-y-6 mt-12">
+            <h2 class="text-3xl font-black text-center mb-8">
+                <span class="gradient-text">GAME DECONSTRUCTION</span>
+                <span class="block text-sm text-gray-500 font-normal mt-2">Fishland • Farmland • Hat Trick • Free Gifts</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Fishland/Farmland -->
+                <div class="bg-gray-900/50 border border-blue-500/30 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-blue-400 mb-3">🐟 FISHLAND / 🌾 FARMLAND</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span class="text-gray-400">Win Probability (No Purchase)</span>
+                            <span class="text-red-400 font-mono">&lt;5%</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span class="text-gray-400">Time Investment</span>
+                            <span class="text-yellow-400 font-mono">8-10 Months</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span class="text-gray-400">Final Gap Trap</span>
+                            <span class="text-red-400 font-mono">0.01-0.05 Units</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-blue-900/20 p-3 rounded text-xs text-blue-200">
+                        <strong>ONLY VIABLE STRATEGY:</strong> If you have &gt;0.05 remaining, abandon immediately. The algorithm will require thousands of additional actions or forced purchases to close the gap. [^15^]
+                    </div>
+                </div>
+
+                <!-- Hat Trick -->
+                <div class="bg-gray-900/50 border border-purple-500/30 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-purple-400 mb-3">🎩 HAT TRICK</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span class="text-gray-400">Win Probability</span>
+                            <span class="text-yellow-400 font-mono">~15% (with group help)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span class="text-gray-400">Requirement</span>
+                            <span class="text-red-400 font-mono">200+ Clicks/Assists</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span class="text-gray-400">Solo Viability</span>
+                            <span class="text-red-400 font-mono">IMPOSSIBLE</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-purple-900/20 p-3 rounded text-xs text-purple-200">
+                        <strong>REQUIRED:</strong> Join Facebook/Telegram Temu groups for code exchange. Never give codes without reciprocal agreement. Use up to 12 devices (family phones) to self-assist. [^17^]
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Progress Trap Visualization -->
+            <div class="bg-black/60 border border-red-500/50 rounded-lg p-6 mt-6">
+                <h3 class="text-lg font-bold text-red-400 mb-4 mono">THE PROGRESS ILLUSION VISUALIZER</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="text-gray-400">Initial Progress (Days 1-3)</span>
+                            <span class="text-green-400">95% → 60% remaining</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="text-gray-400">Mid-Game Slowdown (Weeks 2-4)</span>
+                            <span class="text-yellow-400">60% → 30% remaining</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="text-gray-400">The Trap Zone (Months 2-8)</span>
+                            <span class="text-red-400">30% → 0.01% remaining</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2">
+                            <div class="bg-red-500 h-2 rounded-full" style="width: 30%"></div>
+                        </div>
+                        <p class="text-xs text-red-300 mt-1">Each 1% requires exponentially more actions. Final 0.01% requires 3,500+ clicks or purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE QUIT MATRIX -->
+        <section class="mt-12 p-6 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-xl">
+            <h2 class="text-2xl font-bold text-white mb-6 text-center">ABORT CONDITIONS MATRIX</h2>
+            <p class="text-center text-gray-400 mb-6 text-sm">When to cut losses and restart vs. when to persist</p>
+            
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-red-900/20 border border-red-500/30 p-4 rounded text-center">
+                    <div class="text-3xl mb-2">🛑</div>
+                    <h4 class="font-bold text-red-400 mb-2">ABORT IMMEDIATELY</h4>
+                    <ul class="text-xs text-gray-300 space-y-1 text-left">
+                        <li>• Fishland/Farmland: &gt;0.05 currency remaining</li>
+                        <li>• No new user bonuses for 30+ days</li>
+                        <li>• "Just one more purchase" prompt appears</li>
+                        <li>• Energy bonuses drop below 10% return rate</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-900/20 border border-yellow-500/30 p-4 rounded text-center">
+                    <div class="text-3xl mb-2">⚠️</div>
+                    <h4 class="font-bold text-yellow-400 mb-2">REASSESS</h4>
+                    <ul class="text-xs text-gray-300 space-y-1 text-left">
+                        <li>• 0.01-0.05 currency remaining with 45+ day investment</li>
+                        <li>• Access to 5+ devices for Hat Trick assist</li>
+                        <li>• Active Facebook/Telegram exchange groups</li>
+                        <li>• Fetch Rewards Visa card pending</li>
+                    </ul>
+                </div>
+                <div class="bg-green-900/20 border border-green-500/30 p-4 rounded text-center">
+                    <div class="text-3xl mb-2">✅</div>
+                    <h4 class="font-bold text-green-400 mb-2">CONTINUE</h4>
+                    <ul class="text-xs text-gray-300 space-y-1 text-left">
+                        <li>• Fresh account with guest mode available</li>
+                        <li>• &lt;0.01 currency in Farm/Fish games</li>
+                        <li>• Daily check-in streak &lt;7 days (low sunk cost)</li>
+                        <li>• Referral code arbitrage opportunity active</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Tactics -->
+        <section class="mt-12 space-y-6">
+            <h2 class="text-2xl font-black mono text-center">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">BLACK HAT TACTICS</span>
+                <span class="block text-xs text-gray-500 mt-1">Use at own risk • Account termination possible</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-900/80 border-l-4 border-cyan-500 p-5 rounded-r-lg">
+                    <h4 class="font-bold text-cyan-400 mb-2">Device Farm Automation</h4>
+                    <p class="text-sm text-gray-300 mb-2">Using Android emulators (BlueStacks/LDPlayer) with macro recorders to automate daily check-ins across 12+ virtual devices.</p>
+                    <span class="text-xs text-red-400">Risk: High • Detection: Behavioral analysis</span>
+                </div>
+                <div class="bg-gray-900/80 border-l-4 border-purple-500 p-5 rounded-r-lg">
+                    <h4 class="font-bold text-purple-400 mb-2">Receipt Fabrication</h4>
+                    <p class="text-sm text-gray-300 mb-2">Using receipt generators for Fetch Rewards to accelerate point accumulation without actual purchases.</p>
+                    <span class="text-xs text-red-400">Risk: Legal/Fraud • Detection: OCR validation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Checklist -->
+        <section class="mt-12 bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-gray-700 rounded-xl p-8">
+            <h2 class="text-2xl font-bold text-center mb-6 text-white">PRE-ENGAGEMENT CHECKLIST</h2>
+            <div class="max-w-2xl mx-auto space-y-3">
+                <label class="flex items-center gap-3 p-3 bg-black/40 rounded cursor-pointer hover:bg-black/60 transition">
+                    <input type="checkbox" class="w-5 h-5 accent-green-500 rounded">
+                    <span class="text-gray-300">I understand that 95% of Temu "games" require purchases to complete</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-black/40 rounded cursor-pointer hover:bg-black/60 transition">
+                    <input type="checkbox" class="w-5 h-5 accent-green-500 rounded">
+                    <span class="text-gray-300">I have set a hard limit: Abandon game if &gt;0.05 currency remains</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-black/40 rounded cursor-pointer hover:bg-black/60 transition">
+                    <input type="checkbox" class="w-5 h-5 accent-green-500 rounded">
+                    <span class="text-gray-300">I have Fetch Rewards installed and will fund Temu via Visa gift cards only</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-black/40 rounded cursor-pointer hover:bg-black/60 transition">
+                    <input type="checkbox" class="w-5 h-5 accent-green-500 rounded">
+                    <span class="text-gray-300">I will not invite friends/family (protecting them from the funnel)</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-black/40 rounded cursor-pointer hover:bg-black/60 transition">
+                    <input type="checkbox" class="w-5 h-5 accent-red-500 rounded">
+                    <span class="text-red-400 font-bold">I accept that my time may be worth more than the $5-20 item I'm trying to win</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-gray-600 text-xs mono pb-8">
+            <p>SOURCES: Reddit r/TemuThings [^15^][^17^][^20^], Medium [^2^], WikiHow [^8^], YouTube creators [^3^][^10^]</p>
+            <p class="mt-2">Generated 2026-03-28 • Information for educational purposes only</p>
+            <p class="mt-1 text-red-900">Remember: If you're not paying with money, you're paying with data and time.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const chars = '01';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+        
+        function draw() {
+            ctx.fillStyle = 'rgba(10, 10, 15, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#ff6b6b';
+            ctx.font = fontSize + 'px monospace';
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        setInterval(draw, 35);
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        // Collapsible sections
+        function toggle(element) {
+            const content = element.querySelector('.content');
+            const chevron = element.querySelector('.chevron');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                chevron.classList.remove('rotate');
+            } else {
+                // Close others
+                document.querySelectorAll('.content.active').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelectorAll('.chevron.rotate').forEach(el => {
+                    el.classList.remove('rotate');
+                });
+                
+                content.classList.add('active');
+                chevron.classList.add('rotate');
+            }
+        }
+    </script>
+</body>
+</html>
